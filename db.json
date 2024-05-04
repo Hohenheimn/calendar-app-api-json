@@ -6,5 +6,24 @@
       "id": 1
     }
   ],
-  "appointment": []
+  "appointment": [
+    {
+      "name": "Maintenance Motorcycle",
+      "date": "2024-05-31",
+      "status": "pending",
+      "id": 1
+    },
+    {
+      "name": "Multisys Exam",
+      "date": "2024-05-06",
+      "status": "completed",
+      "id": 2
+    },
+    {
+      "name": "Learn how to deploy in json-server",
+      "date": "2024-05-04",
+      "status": "pending",
+      "id": 3
+    }
+  ]
 }
