@@ -27,7 +27,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const bcrypt = require("bcryptjs");
 const express_1 = require("express");
 const jwt = require("jsonwebtoken");
-const constants_1 = require("./constants");
+const shared_middlewares_1 = require("./dist/shared-middlewares");
+const constants_1 = require("./dist/constants");
 /**
  * Validate email and password
  */
@@ -169,12 +170,13 @@ const update = (req, res, next) => {
 // Must match routes with and without guards
 exports.default = express_1
   .Router()
+  .use(shared_middlewares_1.bodyParsingHandler)
   .post("/users|register|signup", validate({ required: true }), create)
   .post("/[640]{3}/users", validate({ required: true }), create)
   .post("/login|signin", validate({ required: true }), login)
   .put("/users/:id", validate({ required: true }), update)
   .put("/[640]{3}/users/:id", validate({ required: true }), update)
   .patch("/users/:id", validate({ required: false }), update)
-  .patch("/[640]{3}/users/:id", validate({ required: false }), update);
-
+  .patch("/[640]{3}/users/:id", validate({ required: false }), update)
+  .use(shared_middlewares_1.errorHandler);
 server.listen(port);
