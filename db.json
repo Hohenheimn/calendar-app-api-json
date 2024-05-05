@@ -4,15 +4,19 @@
       "email": "guest@email.com",
       "password": "$2a$10$WpyYwbbmTJQ1YTkqlvPwfevgQ8ST.0y96fcBwAtIYYjDE00rGA7oq",
       "id": 1
+    },
+    {
+      "email": "guest@email.com",
+      "password": "Pass123",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "email": "user2",
+      "password": "password2"
     }
   ],
   "appointment": [
-    {
-      "name": "Maintenance Motorcycle",
-      "date": "2024-05-31",
-      "status": "pending",
-      "id": 1
-    },
     {
       "name": "Multisys Exam",
       "date": "2024-05-06",
@@ -26,8 +30,9 @@
       "id": 3
     },
     {
-      "email": "jomtiu16@gmail.com",
-      "password": "123",
+      "name": "Outing",
+      "date": "2024-05-15",
+      "status": "canceled",
       "id": 4
     }
   ]
